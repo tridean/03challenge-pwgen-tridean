@@ -2,20 +2,19 @@
 
 var passwordText = document.querySelector("#password");
 
-var upperCase = prompt("Would you like to use uppercase characters? Input Y or N.");
-  if (upperCase === "Y"){
-    upperCase = "ABCDEFGHIJKLMNOPQRSTUVQXYZ";
-  }
+var upperCase = "ABCDEFGHIJKLMNOPQRSTUVQXYZ";
+var lowerCase = "abcdefghijklmnopqrstuvwxyz";
+var number = "0123456789";
+var special = "`~!@#$%^&*()-=_+[]{};':,./<>?";
 
-const lowerCase = prompt("Would you like to use lowercase characters? Input Y or N.");
-if (lowerCase === "Y"){
-  lowerCase = "abcdefghijklmnopqrstuvwxyz";
-}
-
-const number = "0123456789";
-const special = "`~!@#$%^&*()-=_+[]{};':,./<>?";
 var length = prompt("Please enter a number between 8 and 128. This will be your password's length.");
-const combChar = upperCase + lowerCase + number + special;
+  if (length > 128){
+    length = 128
+  }
+  if (length < 8){
+    length = 8
+  }
+var combChar = upperCase + lowerCase + number + special;
 
 
 // Assignment Code
