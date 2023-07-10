@@ -1,1 +1,2 @@
-# 03challenge-pwgen-tridean
+# 03 JavaScript: Password Generator
+
